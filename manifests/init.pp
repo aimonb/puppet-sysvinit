@@ -35,7 +35,10 @@
 #
 # Copyright 2011 Your name here, unless otherwise noted.
 #
-class sysvinit {
+class sysvinit() {
 
+  package{'sysv-rc-conf':
+    ensure  =>  latest,
+  }
 
 }
