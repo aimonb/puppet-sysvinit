@@ -1,14 +1,17 @@
 # vim: tabstop=2 shiftwidth=2 softtabstop=2
 
 # Module: 'debootstrap'
-# Author: Morphlabs - Aimon Bustardo <abustardo at morphlabs dot com>
-# Descr:  Puppet Module for managing Chrooted apps via 'debootstrap'
+# Author: Aimon Bustardo <me at aimon dot net>
 
 Puppet::Type.type(:sysvinit).provide(:sysvinit) do
   desc "Puppet Module for managing sysv services via sysv-rc-conf"
 
-  commands :sysvinit => "/usr/sbin/sysv-rc-conf"
-  
+  case Facter.fact(:osfamily).value
+  when "RedHat"
+    commands :sysvinit => "/sbin/chkconfig"
+  when "Debian"
+    commands :sysvinit => "/usr/sbin/sysv-rc-conf"
+  end
 
   def name
     resource[:name]

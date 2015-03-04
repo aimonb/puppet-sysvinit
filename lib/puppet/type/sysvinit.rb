@@ -1,8 +1,7 @@
 # vim: tabstop=2 shiftwidth=2 softtabstop=2
 
 # Module: 'sysvinit'
-# Author: Morphlabs - Aimon Bustardo <abustardo at morphlabs dot com>
-# Descr:  Puppet Module for managing sysv services via sysv-rc-conf
+# Author: Aimon Bustardo <me at aimon dot net>
 
 Puppet::Type.newtype(:sysvinit) do
   @doc = "Puppet interface to sysv-rc-conf."

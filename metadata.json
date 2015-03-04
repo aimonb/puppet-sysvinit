@@ -1,0 +1,16 @@
+{
+  "name": "aimonb-sysvinit",
+  "version": "0.2.2",
+  "author": "aimonb",
+  "summary": "Manage SysV Init Services with chkconfig",
+  "license": "MIT",
+  "source": "https://github.com/aimonb/puppet-sysvinit",
+  "project_page": "https://github.com/aimonb/puppet-sysvinit",
+  "issues_url": "https://github.com/aimonb/puppet-sysvinit/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
